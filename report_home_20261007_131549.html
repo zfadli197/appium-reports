@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RCTI+ Functional Testing - Home - Test Report</title>
+<style>
+ * { box-sizing: border-box; }
+ body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 24px;
+        background:#eceff1; color:#263238; }
+ .container { max-width: 1180px; margin: 0 auto; }
+ h1 { color:#263238; margin:0 0 4px; font-size:26px; }
+ h2 { color:#37474f; margin:32px 0 12px; font-size:19px;
+      border-left:5px solid #1565c0; padding-left:10px; }
+ .subtitle { color:#607d8b; margin-bottom:20px; font-size:14px; }
+ .panel { background:#fff; padding:18px 20px; border-radius:10px;
+          box-shadow:0 1px 4px rgba(0,0,0,.12); margin-bottom:18px; }
+ .banner { background:#2e7d32; color:#fff; padding:12px 20px; border-radius:10px;
+           font-weight:bold; font-size:16px; margin-bottom:18px;
+           box-shadow:0 1px 4px rgba(0,0,0,.15); }
+ .cards { display:flex; flex-wrap:wrap; gap:12px; }
+ .card { flex:1 1 150px; background:#fff; border-radius:10px; padding:16px;
+         text-align:center; box-shadow:0 1px 4px rgba(0,0,0,.12); }
+ .card-value { font-size:28px; font-weight:bold; }
+ .card-label { font-size:11px; letter-spacing:.6px; color:#78909c; margin-top:4px; }
+ table.info { width:100%; border-collapse:collapse; }
+ table.info td { padding:7px 10px; border-bottom:1px solid #eceff1; font-size:14px; }
+ table.info td:first-child { color:#607d8b; width:190px; font-weight:600; }
+ table.result { border-collapse:collapse; width:100%; background:#fff;
+        box-shadow:0 1px 4px rgba(0,0,0,.12); border-radius:10px; overflow:hidden; }
+ table.result th, table.result td { padding:10px 12px; text-align:left;
+        border-bottom:1px solid #eceff1; font-size:13.5px; vertical-align:top; }
+ table.result th { background:#37474f; color:#fff; font-size:12px;
+        letter-spacing:.5px; text-transform:uppercase; }
+ table.result tr:nth-child(even) td { background:#fafafa; }
+ table.result tr:hover td { background:#e3f2fd; }
+ td.tc { font-family:Consolas,monospace; font-weight:bold; color:#1565c0; white-space:nowrap; }
+ td.num { text-align:right; font-family:Consolas,monospace; white-space:nowrap; }
+ td.detail { color:#455a64; }
+ td.shots { text-align:center; }
+ .shots-wrap { display:flex; flex-wrap:wrap; gap:4px; justify-content:center; }
+ .thumb { width:56px; border-radius:5px; border:1px solid #cfd8dc;
+          cursor:zoom-in; display:block; transition:transform .15s; }
+ .thumb:hover { transform:scale(1.1); border-color:#1565c0; }
+ .more { font-size:11px; color:#78909c; margin-top:3px; }
+ .badge { padding:4px 10px; border-radius:14px; font-size:12px;
+          font-weight:bold; white-space:nowrap; }
+ .footer { text-align:center; color:#90a4ae; font-size:12px; margin-top:28px; }
+</style></head><body>
+<div class="container">
+  <h1>📱 RCTI+ Functional Testing - Home</h1>
+  <div class="subtitle">Laporan hasil functional testing otomatis aplikasi RCTI+
+    (Appium + UiAutomator2)</div>
+
+  <div class="banner">SEMUA TEST PASSED 🎉 &nbsp;—&nbsp; 9 dari 9 test case dieksekusi PASSED (100%)</div>
+
+  <div class="cards"><div class='card'><div class='card-value' style='color:#37474f'>9</div><div class='card-label'>TOTAL TEST CASE</div></div><div class='card'><div class='card-value' style='color:#2e7d32'>9</div><div class='card-label'>PASSED</div></div><div class='card'><div class='card-value' style='color:#c62828'>0</div><div class='card-label'>FAILED</div></div><div class='card'><div class='card-value' style='color:#546e7a'>0</div><div class='card-label'>SKIPPED</div></div><div class='card'><div class='card-value' style='color:#1565c0'>100%</div><div class='card-label'>PASS RATE</div></div><div class='card'><div class='card-value' style='color:#ef6c00'>0%</div><div class='card-label'>FAIL RATE</div></div><div class='card'><div class='card-value' style='color:#37474f'>623.0s</div><div class='card-label'>DURASI</div></div></div>
+
+  <div class="panel" style="background:#fff8e1;border-left:4px solid #f9a825">
+    <b>ℹ️ Cara membaca laporan ini</b>
+    <ul style="margin:8px 0 0 18px;padding:0;font-size:13.5px;color:#455a64;line-height:1.7">
+      <li><b>Test Case Positif</b> = memastikan fitur normal BERFUNGSI (contoh: buka halaman, konten tampil).</li>
+      <li><b>Test Case Negatif</b> = memastikan aplikasi TIDAK RUSAK saat dipakai tidak wajar
+          (contoh: <i>ketuk cepat berkali-kali</i>, <i>tekan tombol kembali berturut-turut</i>,
+          <i>ketuk area yang bukan tombol</i>). Test ini PASSED bila aplikasi tetap normal.</li>
+      <li><b>Tangkapan Layar</b> = foto layar HP saat test berjalan; klik gambar untuk memperbesar.
+          Nama file diawali kode test (mis. <code>TC-N13_...</code>) agar cocok dengan baris tabel.</li>
+      <li><b>Keterangan</b> = hasil tiap langkah dalam bahasa sederhana;
+          arahkan mouse ke teks untuk melihat detail teknis aslinya.</li>
+    </ul>
+  </div>
+
+  <h2>📋 Informasi Perangkat &amp; Aplikasi</h2>
+  <div class="panel">
+    <table class="info">
+      <tr><td>Platform</td><td><b>Android 14</b></td></tr>
+      <tr><td>Nama Perangkat (UDID)</td><td>10DD8P019Z001AA</td></tr>
+      <tr><td>Model Perangkat</td><td>V2205</td></tr>
+      <tr><td>Produsen</td><td>vivo</td></tr>
+      <tr><td>Dijalankan Oleh</td><td><b>zul.fadli</b></td></tr>
+      <tr><td>Kategori Pengujian</td><td><b>Positif &amp; Negatif (Semua Kategori)</b></td></tr>
+      <tr><td>Framework</td><td>Appium 2 + UiAutomator2 (Python Client) + Selenium WebDriver</td></tr>
+      <tr><td>Versi Android</td><td><b>Android 14</b></td></tr>
+      <tr><td>Paket Aplikasi</td><td>com.fta.rctitv</td></tr>
+      <tr><td>App Activity</td><td>com.fta.rctitv.ui.splashscreen.SplashScreenActivity</td></tr>
+      <tr><td>Tanggal Pengujian</td><td>2026-10-07 13:15:49</td></tr>
+      <tr><td>Total Durasi</td><td>623.0 detik</td></tr>
+      <tr><td>Akun Pengujian</td><td>automation.rcti1791353126.28704@gmail.com</td></tr>
+    </table>
+  </div>
+
+<h2>🔍 Analisa Test Case FAILED</h2>
+<div class="panel" style="color:#2e7d32;font-weight:600">🎉 Tidak ada test case yang gagal pada run ini.</div>
+
+  <h2>📑 Daftar Test Case</h2>
+  <h2>✅ Test Case Positif (5/5 PASSED)</h2>
+  <table class="result"><tr><th style='width:80px'>Kode Test</th><th>Skenario Pengujian</th><th style='width:120px'>Status</th><th style='width:70px'>Durasi</th><th>Keterangan</th><th style='width:260px'>📸 Tangkapan Layar</th></tr>
+  <tr><td class='tc'>TC-PIR01</td><td>Buka menu kategori 'video+' -&gt; konten terbuka &amp; bisa digulir</td><td><span class='badge' style='background:#e8f5e9;color:#2e7d32'>✅ PASSED</span></td><td class='num'>19.4s</td><td class='detail' title='pillar &#39;video+&#39; terbuka (penanda teks terlihat); pillar &#39;video+&#39; bisa di-scroll; kembali ke pillar home'>menu kategori 'video+' terbuka (penanda teks terlihat); menu kategori 'video+' bisa digulir; kembali ke menu kategori home</td><td class='shots'><span style='color:#b0bec5'>-</span></td></tr><tr><td class='tc'>TC-PIR02</td><td>Buka menu kategori 'news+' -&gt; konten terbuka &amp; bisa digulir</td><td><span class='badge' style='background:#e8f5e9;color:#2e7d32'>✅ PASSED</span></td><td class='num'>35.6s</td><td class='detail' title='pillar &#39;news+&#39; terbuka (penanda teks terlihat); pillar &#39;news+&#39; bisa di-scroll; kembali ke pillar home'>menu kategori 'news+' terbuka (penanda teks terlihat); menu kategori 'news+' bisa digulir; kembali ke menu kategori home</td><td class='shots'><span style='color:#b0bec5'>-</span></td></tr><tr><td class='tc'>TC-PIR03</td><td>Buka menu kategori 'audio+' -&gt; konten terbuka &amp; bisa digulir</td><td><span class='badge' style='background:#e8f5e9;color:#2e7d32'>✅ PASSED</span></td><td class='num'>14.7s</td><td class='detail' title='pillar &#39;audio+&#39; terbuka (penanda teks terlihat); pillar &#39;audio+&#39; bisa di-scroll; kembali ke pillar home'>menu kategori 'audio+' terbuka (penanda teks terlihat); menu kategori 'audio+' bisa digulir; kembali ke menu kategori home</td><td class='shots'><span style='color:#b0bec5'>-</span></td></tr><tr><td class='tc'>TC-PIR04</td><td>Buka menu kategori 'hot+' -&gt; konten terbuka &amp; bisa digulir</td><td><span class='badge' style='background:#e8f5e9;color:#2e7d32'>✅ PASSED</span></td><td class='num'>15.2s</td><td class='detail' title='pillar &#39;hot+&#39; terbuka (penanda teks terlihat); pillar &#39;hot+&#39; bisa di-scroll; kembali ke pillar home'>menu kategori 'hot+' terbuka (penanda teks terlihat); menu kategori 'hot+' bisa digulir; kembali ke menu kategori home</td><td class='shots'><span style='color:#b0bec5'>-</span></td></tr><tr><td class='tc'>TC-P28</td><td>Klik Tab Menu Kategori atas (video+/news+/audio+/hot+)</td><td><span class='badge' style='background:#e8f5e9;color:#2e7d32'>✅ PASSED</span></td><td class='num'>366.0s</td><td class='detail' title='pulih dari pillar &#39;hot+&#39; ke beranda utama; tab &#39;video+&#39;: OK (pillar &#39;video+&#39; terbuka (penanda teks terlihat)); tab &#39;news+&#39;: OK (pillar &#39;news+&#39; terbuka (penanda teks terlihat)); tab &#39;audio+&#39;: OK (pillar &#39;audio+&#39; terbuka (penanda teks terlihat)); tab &#39;hot+&#39;: OK (pillar &#39;hot+&#39; terbuka (penand'>pulih dari menu kategori 'hot+' ke beranda utama; tab 'video+': OK (menu kategori 'video+' terbuka (penanda teks terlihat)); tab 'news+': OK (menu kategori 'news+' terbuka (penanda teks terlihat)); tab 'audio+': OK (menu kategori 'audio+' terbuka (penanda teks terlihat)); tab 'hot+': OK (menu kategori 'hot+' terbuka (penand</td><td class='shots'><span style='color:#b0bec5'>-</span></td></tr>
+  </table>
+
+  <h2>⛔ Test Case Negatif (4/4 PASSED)</h2>
+  <table class="result"><tr><th style='width:80px'>Kode Test</th><th>Skenario Pengujian</th><th style='width:120px'>Status</th><th style='width:70px'>Durasi</th><th>Keterangan</th><th style='width:260px'>📸 Tangkapan Layar</th></tr>
+  <tr><td class='tc'>TC-PIR05</td><td>Ketuk cepat berkali-kali menu kategori 'video+' 5x (uji macet/keluar sendiri)</td><td><span class='badge' style='background:#e8f5e9;color:#2e7d32'>✅ PASSED</span></td><td class='num'>11.9s</td><td class='detail' title='pillar &#39;video+&#39; di-rapid-tap 5x via adb; app tetap stabil (tidak crash / ANR)'>menu kategori 'video+' diketuk cepat berkali-kali 5x via adb; app tetap normal (tidak keluar sendiri / macet)</td><td class='shots'><span style='color:#b0bec5'>-</span></td></tr><tr><td class='tc'>TC-PIR06</td><td>Ketuk cepat berkali-kali menu kategori 'news+' 5x (uji macet/keluar sendiri)</td><td><span class='badge' style='background:#e8f5e9;color:#2e7d32'>✅ PASSED</span></td><td class='num'>117.1s</td><td class='detail' title='pillar &#39;news+&#39; di-rapid-tap 5x via adb; app tetap stabil (tidak crash / ANR)'>menu kategori 'news+' diketuk cepat berkali-kali 5x via adb; app tetap normal (tidak keluar sendiri / macet)</td><td class='shots'><span style='color:#b0bec5'>-</span></td></tr><tr><td class='tc'>TC-PIR07</td><td>Ketuk cepat berkali-kali menu kategori 'audio+' 5x (uji macet/keluar sendiri)</td><td><span class='badge' style='background:#e8f5e9;color:#2e7d32'>✅ PASSED</span></td><td class='num'>5.5s</td><td class='detail' title='pillar &#39;audio+&#39; di-rapid-tap 5x via adb; app tetap stabil (tidak crash / ANR)'>menu kategori 'audio+' diketuk cepat berkali-kali 5x via adb; app tetap normal (tidak keluar sendiri / macet)</td><td class='shots'><span style='color:#b0bec5'>-</span></td></tr><tr><td class='tc'>TC-PIR08</td><td>Ketuk cepat berkali-kali menu kategori 'hot+' 5x (uji macet/keluar sendiri)</td><td><span class='badge' style='background:#e8f5e9;color:#2e7d32'>✅ PASSED</span></td><td class='num'>5.6s</td><td class='detail' title='pillar &#39;hot+&#39; di-rapid-tap 5x via adb; app tetap stabil (tidak crash / ANR)'>menu kategori 'hot+' diketuk cepat berkali-kali 5x via adb; app tetap normal (tidak keluar sendiri / macet)</td><td class='shots'><span style='color:#b0bec5'>-</span></td></tr>
+  </table>
+
+
+  <div class="footer">
+    📸 Tangkapan layar ter-embed di tabel, hanya untuk baris FAILED/SKIPPED
+    (kebijakan retensi: test PASSED tidak menyimpan bukti visual; file asli:
+    <code>screenshots/</code>) &nbsp;|&nbsp;
+    📄 Data laporan (JSON): <code>report_home_20261007_131549.json</code> &nbsp;|&nbsp;
+    Generated by Appium Automation Framework
+  </div>
+</div>
+</body></html>
