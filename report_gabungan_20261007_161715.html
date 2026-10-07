@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RCTI+ Functional Testing - Pillar - GABUNGAN 2 DEVICE - Test Report</title>
+<style>
+ * { box-sizing: border-box; }
+ body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 24px;
+        background:#eceff1; color:#263238; }
+ .container { max-width: 1180px; margin: 0 auto; }
+ h1 { color:#263238; margin:0 0 4px; font-size:26px; }
+ h2 { color:#37474f; margin:32px 0 12px; font-size:19px;
+      border-left:5px solid #1565c0; padding-left:10px; }
+ h3 { color:#455a64; margin:22px 0 10px; font-size:16px; }
+ .subtitle { color:#607d8b; margin-bottom:20px; font-size:14px; }
+ .panel { background:#fff; padding:18px 20px; border-radius:10px;
+          box-shadow:0 1px 4px rgba(0,0,0,.12); margin-bottom:18px; }
+ .banner { background:#2e7d32; color:#fff; padding:12px 20px; border-radius:10px;
+           font-weight:bold; font-size:16px; margin-bottom:18px;
+           box-shadow:0 1px 4px rgba(0,0,0,.15); }
+ .cards { display:flex; flex-wrap:wrap; gap:12px; margin-bottom:8px; }
+ .card { flex:1 1 150px; background:#fff; border-radius:10px; padding:16px;
+         text-align:center; box-shadow:0 1px 4px rgba(0,0,0,.12); }
+ .card-value { font-size:28px; font-weight:bold; }
+ .card-label { font-size:11px; letter-spacing:.6px; color:#78909c; margin-top:4px; }
+ table.info { width:100%; border-collapse:collapse; }
+ table.info td { padding:7px 10px; border-bottom:1px solid #eceff1; font-size:14px; }
+ table.info td:first-child { color:#607d8b; width:190px; font-weight:600; }
+ table.result { border-collapse:collapse; width:100%; background:#fff;
+        box-shadow:0 1px 4px rgba(0,0,0,.12); border-radius:10px; overflow:hidden;
+        margin-bottom:10px; }
+ table.result th, table.result td { padding:10px 12px; text-align:left;
+        border-bottom:1px solid #eceff1; font-size:13.5px; vertical-align:top; }
+ table.result th { background:#37474f; color:#fff; font-size:12px;
+        letter-spacing:.5px; text-transform:uppercase; }
+ table.result tr:nth-child(even) td { background:#fafafa; }
+ table.result tr:hover td { background:#e3f2fd; }
+ td.tc { font-family:Consolas,monospace; font-weight:bold; color:#1565c0; white-space:nowrap; }
+ td.num { text-align:right; font-family:Consolas,monospace; white-space:nowrap; }
+ td.detail { color:#455a64; }
+ td.shots { text-align:center; }
+ .shots-wrap { display:flex; flex-wrap:wrap; gap:4px; justify-content:center; }
+ .thumb { width:56px; border-radius:5px; border:1px solid #cfd8dc;
+          cursor:zoom-in; display:block; transition:transform .15s; }
+ .thumb:hover { transform:scale(1.1); border-color:#1565c0; }
+ .more { font-size:11px; color:#78909c; margin-top:3px; }
+ .badge { padding:4px 10px; border-radius:14px; font-size:12px;
+          font-weight:bold; white-space:nowrap; }
+ .device-block { border-top:3px dashed #b0bec5; margin-top:36px; padding-top:8px; }
+ .nav { display:flex; flex-wrap:wrap; gap:8px; margin:14px 0 4px; }
+ .navlink { background:#e3f2fd; color:#1565c0; padding:8px 14px; border-radius:18px;
+            text-decoration:none; font-size:13px; font-weight:600; }
+ .navlink:hover { background:#bbdefb; }
+ .footer { text-align:center; color:#90a4ae; font-size:12px; margin-top:28px; }
+</style></head><body>
+<div class="container">
+  <h1>📱 RCTI+ Functional Testing - Pillar - GABUNGAN 2 DEVICE</h1>
+  <div class="subtitle">Laporan hasil functional testing otomatis aplikasi RCTI+
+    yang dijalankan bersamaan di beberapa perangkat (Appium + UiAutomator2)
+    &mdash; 07 October 2026, 16.17 WIB</div>
+
+  <div class="banner" style="background:#2e7d32">
+    SEMUA TEST PASSED di semua perangkat 🎉 &nbsp;—&nbsp; 9 dari 9 test case dieksekusi PASSED (100%)</div>
+
+  <div class="cards"><div class='card'><div class='card-value' style='color:#37474f'>2</div><div class='card-label'>PERANGKAT</div></div><div class='card'><div class='card-value' style='color:#37474f'>9</div><div class='card-label'>TOTAL TEST</div></div><div class='card'><div class='card-value' style='color:#2e7d32'>9</div><div class='card-label'>PASSED</div></div><div class='card'><div class='card-value' style='color:#c62828'>0</div><div class='card-label'>FAILED</div></div><div class='card'><div class='card-value' style='color:#546e7a'>0</div><div class='card-label'>SKIPPED</div></div><div class='card'><div class='card-value' style='color:#1565c0'>100%</div><div class='card-label'>PASS RATE</div></div><div class='card'><div class='card-value' style='color:#37474f'>128s</div><div class='card-label'>DURASI</div></div></div>
+
+  <div class="panel" style="background:#fff8e1;border-left:4px solid #f9a825">
+    <b>ℹ️ Cara membaca laporan ini</b>
+    <ul style="margin:8px 0 0 18px;padding:0;font-size:13.5px;color:#455a64;line-height:1.7">
+      <li><b>Test Case Positif</b> = memastikan fitur normal BERFUNGSI (contoh: buka halaman, konten tampil).</li>
+      <li><b>Test Case Negatif</b> = memastikan aplikasi TIDAK RUSAK saat dipakai tidak wajar
+          (contoh: <i>ketuk cepat berkali-kali</i>, <i>tekan tombol kembali berturut-turut</i>,
+          <i>ketuk area yang bukan tombol</i>). Test ini PASSED bila aplikasi tetap normal.</li>
+      <li><b>Tangkapan Layar</b> = foto layar HP saat test berjalan; klik gambar untuk memperbesar.
+          Nama file diawali kode test (mis. <code>TC-N13_...</code>) agar cocok dengan baris tabel.</li>
+      <li><b>Keterangan</b> = hasil tiap langkah dalam bahasa sederhana;
+          arahkan mouse ke teks untuk melihat detail teknis aslinya.</li>
+    </ul>
+  </div>
+
+  <h2>📊 Perbandingan Antar Perangkat</h2>
+  <table class="result">
+  <tr><th>Perangkat</th><th>Nama &amp; Model</th><th>UDID</th><th>OS</th><th>Total</th><th>PASSED</th>
+  <th>FAILED</th><th>SKIPPED</th><th>PASS RATE</th><th>Durasi</th><th>Status</th></tr>
+  <tr><td class='tc'>[Device 1]</td><td><a href='#dev-d1'>10DD8P019Z001AA (vivo V2205)</a></td><td>10DD8P019Z001AA</td><td>Android 14</td><td class='num'>5</td><td class='num'>5</td><td class='num'>0</td><td class='num'>0</td><td class='num'>100%</td><td class='num'>81.1s</td><td><span class='badge' style='background:#e8f5e9;color:#2e7d32'>✅ SEMUA PASSED</span></td></tr><tr><td class='tc'>[Device 2]</td><td><a href='#dev-d2'>OVTKMZ5T55YLUWBU (OPPO CPH1823)</a></td><td>OVTKMZ5T55YLUWBU</td><td>Android 10</td><td class='num'>4</td><td class='num'>4</td><td class='num'>0</td><td class='num'>0</td><td class='num'>100%</td><td class='num'>120.2s</td><td><span class='badge' style='background:#e8f5e9;color:#2e7d32'>✅ SEMUA PASSED</span></td></tr>
+  </table>
+  <div class="nav"><a class='navlink' href='#dev-d1'>📱 [Device 1] 10DD8P019Z001AA (vivo V2205)</a><a class='navlink' href='#dev-d2'>📱 [Device 2] OVTKMZ5T55YLUWBU (OPPO CPH1823)</a></div>
+
+  
+<div class="device-block" id="dev-d1">
+  <h2>📱 [Device 1] &mdash; 10DD8P019Z001AA (vivo V2205)</h2>
+  <div class="banner" style="background:#2e7d32">SEMUA PASSED - 5/5 dieksekusi (100%)</div>
+  <div class="cards"><div class='card'><div class='card-value' style='color:#37474f'>5</div><div class='card-label'>TOTAL</div></div><div class='card'><div class='card-value' style='color:#2e7d32'>5</div><div class='card-label'>PASSED</div></div><div class='card'><div class='card-value' style='color:#c62828'>0</div><div class='card-label'>FAILED</div></div><div class='card'><div class='card-value' style='color:#546e7a'>0</div><div class='card-label'>SKIPPED</div></div><div class='card'><div class='card-value' style='color:#1565c0'>100%</div><div class='card-label'>PASS RATE</div></div><div class='card'><div class='card-value' style='color:#37474f'>81.1s</div><div class='card-label'>DURASI</div></div></div>
+  <div class="panel">
+    <table class="info">
+      <tr><td>Platform</td><td><b>Android 14</b></td></tr>
+      <tr><td>Nama Perangkat (UDID)</td><td>10DD8P019Z001AA</td></tr>
+      <tr><td>Model Perangkat</td><td>V2205</td></tr>
+      <tr><td>Produsen</td><td>vivo</td></tr>
+      <tr><td>Versi Android</td><td><b>Android 14</b></td></tr>
+      <tr><td>Paket Aplikasi</td><td>com.fta.rctitv</td></tr>
+      <tr><td>Tanggal Pengujian</td><td>2026-10-07 16:16:30</td></tr>
+      <tr><td>Total Durasi</td><td>81.1 detik</td></tr>
+      <tr><td>Akun Pengujian</td><td>automation.rcti1791364509.23912@gmail.com</td></tr>
+      <tr><td>Laporan Sumber</td><td><code>report_pillar_d1_20261007_161630.json</code></td></tr>
+    </table>
+  </div>
+  <h3>🔍 Analisa Test Case Failed [Device 1]</h3><div class='panel' style='color:#2e7d32;font-weight:600'>🎉 Tidak ada test case yang gagal di device ini.</div>
+  <h3>✅ Test Case Positif [Device 1] (3/3 PASSED)</h3>
+  <table class="result"><tr><th style='width:80px'>Kode Test</th><th>Skenario Pengujian</th><th style='width:120px'>Status</th><th style='width:70px'>Durasi</th><th>Keterangan</th><th style='width:260px'>📸 Tangkapan Layar</th></tr>
+  <tr><td class='tc'>TC-PIR01</td><td>Buka menu kategori 'video+' -&gt; konten terbuka &amp; bisa digulir</td><td><span class='badge' style='background:#e8f5e9;color:#2e7d32'>✅ PASSED</span></td><td class='num'>14.1s</td><td class='detail' title='pillar &#39;video+&#39; terbuka (penanda teks terlihat); pillar &#39;video+&#39; bisa di-scroll; kembali ke pillar home'>menu kategori 'video+' terbuka (penanda teks terlihat); menu kategori 'video+' bisa digulir; kembali ke menu kategori home</td><td class='shots'><span style='color:#b0bec5'>-</span></td></tr><tr><td class='tc'>TC-PIR03</td><td>Buka menu kategori 'audio+' -&gt; konten terbuka &amp; bisa digulir</td><td><span class='badge' style='background:#e8f5e9;color:#2e7d32'>✅ PASSED</span></td><td class='num'>9.7s</td><td class='detail' title='pillar &#39;audio+&#39; terbuka (penanda teks terlihat); pillar &#39;audio+&#39; bisa di-scroll; kembali ke pillar home'>menu kategori 'audio+' terbuka (penanda teks terlihat); menu kategori 'audio+' bisa digulir; kembali ke menu kategori home</td><td class='shots'><span style='color:#b0bec5'>-</span></td></tr><tr><td class='tc'>TC-P28</td><td>Klik Tab Menu Kategori atas (video+/news+/audio+/hot+)</td><td><span class='badge' style='background:#e8f5e9;color:#2e7d32'>✅ PASSED</span></td><td class='num'>11.0s</td><td class='detail' title='pulih dari pillar &#39;audio+&#39; ke beranda utama; tab &#39;video+&#39;: OK (Berhasil pindah ke tab video+); tab &#39;news+&#39;: OK (Berhasil pindah ke tab news+); tab &#39;audio+&#39;: OK (Berhasil pindah ke tab audio+); tab &#39;hot+&#39;: OK (Berhasil pindah ke tab hot+); kembali ke beranda utama'>pulih dari menu kategori 'audio+' ke beranda utama; tab 'video+': OK (Berhasil pindah ke tab video+); tab 'news+': OK (Berhasil pindah ke tab news+); tab 'audio+': OK (Berhasil pindah ke tab audio+); tab 'hot+': OK (Berhasil pindah ke tab hot+); kembali ke beranda utama</td><td class='shots'><span style='color:#b0bec5'>-</span></td></tr>
+  </table>
+  <h3>⛔ Test Case Negatif [Device 1] (2/2 PASSED)</h3>
+  <table class="result"><tr><th style='width:80px'>Kode Test</th><th>Skenario Pengujian</th><th style='width:120px'>Status</th><th style='width:70px'>Durasi</th><th>Keterangan</th><th style='width:260px'>📸 Tangkapan Layar</th></tr>
+  <tr><td class='tc'>TC-PIR05</td><td>Ketuk cepat berkali-kali menu kategori 'video+' 5x (uji macet/keluar sendiri)</td><td><span class='badge' style='background:#e8f5e9;color:#2e7d32'>✅ PASSED</span></td><td class='num'>7.2s</td><td class='detail' title='pillar &#39;video+&#39; di-rapid-tap 5x via adb; app tetap stabil (tidak crash / ANR)'>menu kategori 'video+' diketuk cepat berkali-kali 5x via adb; app tetap normal (tidak keluar sendiri / macet)</td><td class='shots'><span style='color:#b0bec5'>-</span></td></tr><tr><td class='tc'>TC-PIR07</td><td>Ketuk cepat berkali-kali menu kategori 'audio+' 5x (uji macet/keluar sendiri)</td><td><span class='badge' style='background:#e8f5e9;color:#2e7d32'>✅ PASSED</span></td><td class='num'>4.3s</td><td class='detail' title='pillar &#39;audio+&#39; di-rapid-tap 5x via adb; app tetap stabil (tidak crash / ANR)'>menu kategori 'audio+' diketuk cepat berkali-kali 5x via adb; app tetap normal (tidak keluar sendiri / macet)</td><td class='shots'><span style='color:#b0bec5'>-</span></td></tr>
+  </table>
+  
+</div>
+<div class="device-block" id="dev-d2">
+  <h2>📱 [Device 2] &mdash; OVTKMZ5T55YLUWBU (OPPO CPH1823)</h2>
+  <div class="banner" style="background:#2e7d32">SEMUA PASSED - 4/4 dieksekusi (100%)</div>
+  <div class="cards"><div class='card'><div class='card-value' style='color:#37474f'>4</div><div class='card-label'>TOTAL</div></div><div class='card'><div class='card-value' style='color:#2e7d32'>4</div><div class='card-label'>PASSED</div></div><div class='card'><div class='card-value' style='color:#c62828'>0</div><div class='card-label'>FAILED</div></div><div class='card'><div class='card-value' style='color:#546e7a'>0</div><div class='card-label'>SKIPPED</div></div><div class='card'><div class='card-value' style='color:#1565c0'>100%</div><div class='card-label'>PASS RATE</div></div><div class='card'><div class='card-value' style='color:#37474f'>120.2s</div><div class='card-label'>DURASI</div></div></div>
+  <div class="panel">
+    <table class="info">
+      <tr><td>Platform</td><td><b>Android 10</b></td></tr>
+      <tr><td>Nama Perangkat (UDID)</td><td>OVTKMZ5T55YLUWBU</td></tr>
+      <tr><td>Model Perangkat</td><td>CPH1823</td></tr>
+      <tr><td>Produsen</td><td>OPPO</td></tr>
+      <tr><td>Versi Android</td><td><b>Android 10</b></td></tr>
+      <tr><td>Paket Aplikasi</td><td>com.fta.rctitv</td></tr>
+      <tr><td>Tanggal Pengujian</td><td>2026-10-07 16:17:14</td></tr>
+      <tr><td>Total Durasi</td><td>120.2 detik</td></tr>
+      <tr><td>Akun Pengujian</td><td>automation.rcti1791364513.3092@gmail.com</td></tr>
+      <tr><td>Laporan Sumber</td><td><code>report_pillar_d2_20261007_161714.json</code></td></tr>
+    </table>
+  </div>
+  <h3>🔍 Analisa Test Case Failed [Device 2]</h3><div class='panel' style='color:#2e7d32;font-weight:600'>🎉 Tidak ada test case yang gagal di device ini.</div>
+  <h3>✅ Test Case Positif [Device 2] (2/2 PASSED)</h3>
+  <table class="result"><tr><th style='width:80px'>Kode Test</th><th>Skenario Pengujian</th><th style='width:120px'>Status</th><th style='width:70px'>Durasi</th><th>Keterangan</th><th style='width:260px'>📸 Tangkapan Layar</th></tr>
+  <tr><td class='tc'>TC-PIR02</td><td>Buka menu kategori 'news+' -&gt; konten terbuka &amp; bisa digulir</td><td><span class='badge' style='background:#e8f5e9;color:#2e7d32'>✅ PASSED</span></td><td class='num'>9.8s</td><td class='detail' title='pillar &#39;news+&#39; terbuka (penanda teks terlihat); pillar &#39;news+&#39; bisa di-scroll; kembali ke pillar home'>menu kategori 'news+' terbuka (penanda teks terlihat); menu kategori 'news+' bisa digulir; kembali ke menu kategori home</td><td class='shots'><span style='color:#b0bec5'>-</span></td></tr><tr><td class='tc'>TC-PIR04</td><td>Buka menu kategori 'hot+' -&gt; konten terbuka &amp; bisa digulir</td><td><span class='badge' style='background:#e8f5e9;color:#2e7d32'>✅ PASSED</span></td><td class='num'>10.0s</td><td class='detail' title='pillar &#39;hot+&#39; terbuka (penanda teks terlihat); pillar &#39;hot+&#39; bisa di-scroll; kembali ke pillar home'>menu kategori 'hot+' terbuka (penanda teks terlihat); menu kategori 'hot+' bisa digulir; kembali ke menu kategori home</td><td class='shots'><span style='color:#b0bec5'>-</span></td></tr>
+  </table>
+  <h3>⛔ Test Case Negatif [Device 2] (2/2 PASSED)</h3>
+  <table class="result"><tr><th style='width:80px'>Kode Test</th><th>Skenario Pengujian</th><th style='width:120px'>Status</th><th style='width:70px'>Durasi</th><th>Keterangan</th><th style='width:260px'>📸 Tangkapan Layar</th></tr>
+  <tr><td class='tc'>TC-PIR06</td><td>Ketuk cepat berkali-kali menu kategori 'news+' 5x (uji macet/keluar sendiri)</td><td><span class='badge' style='background:#e8f5e9;color:#2e7d32'>✅ PASSED</span></td><td class='num'>67.2s</td><td class='detail' title='pillar &#39;news+&#39; di-rapid-tap 5x via adb; app tetap stabil (tidak crash / ANR)'>menu kategori 'news+' diketuk cepat berkali-kali 5x via adb; app tetap normal (tidak keluar sendiri / macet)</td><td class='shots'><span style='color:#b0bec5'>-</span></td></tr><tr><td class='tc'>TC-PIR08</td><td>Ketuk cepat berkali-kali menu kategori 'hot+' 5x (uji macet/keluar sendiri)</td><td><span class='badge' style='background:#e8f5e9;color:#2e7d32'>✅ PASSED</span></td><td class='num'>5.8s</td><td class='detail' title='pillar &#39;hot+&#39; di-rapid-tap 5x via adb; app tetap stabil (tidak crash / ANR)'>menu kategori 'hot+' diketuk cepat berkali-kali 5x via adb; app tetap normal (tidak keluar sendiri / macet)</td><td class='shots'><span style='color:#b0bec5'>-</span></td></tr>
+  </table>
+  
+</div>
+
+  <div class="footer">
+    📸 Tangkapan layar ter-embed di tabel (file asli: <code>screenshots_&lt;tag&gt;/</code>) &nbsp;|&nbsp;
+    📄 Data laporan (JSON): <code>report_gabungan_20261007_161715.json</code> &nbsp;|&nbsp;
+    Generated by Appium Automation Framework (run_parallel.py + combine_reports.py)
+  </div>
+</div>
+</body></html>
