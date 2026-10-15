@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RCTI+ Functional Testing - Short+ - Test Report</title>
+<style>
+ * { box-sizing: border-box; }
+ body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 24px;
+        background:#eceff1; color:#263238; }
+ .container { max-width: 1180px; margin: 0 auto; }
+ h1 { color:#263238; margin:0 0 4px; font-size:26px; }
+ h2 { color:#37474f; margin:32px 0 12px; font-size:19px;
+      border-left:5px solid #1565c0; padding-left:10px; }
+ .subtitle { color:#607d8b; margin-bottom:20px; font-size:14px; }
+ .panel { background:#fff; padding:18px 20px; border-radius:10px;
+          box-shadow:0 1px 4px rgba(0,0,0,.12); margin-bottom:18px; }
+ .banner { background:#c62828; color:#fff; padding:12px 20px; border-radius:10px;
+           font-weight:bold; font-size:16px; margin-bottom:18px;
+           box-shadow:0 1px 4px rgba(0,0,0,.15); }
+ .cards { display:flex; flex-wrap:wrap; gap:12px; }
+ .card { flex:1 1 150px; background:#fff; border-radius:10px; padding:16px;
+         text-align:center; box-shadow:0 1px 4px rgba(0,0,0,.12); }
+ .card-value { font-size:28px; font-weight:bold; }
+ .card-label { font-size:11px; letter-spacing:.6px; color:#78909c; margin-top:4px; }
+ table.info { width:100%; border-collapse:collapse; }
+ table.info td { padding:7px 10px; border-bottom:1px solid #eceff1; font-size:14px; }
+ table.info td:first-child { color:#607d8b; width:190px; font-weight:600; }
+ table.result { border-collapse:collapse; width:100%; background:#fff;
+        box-shadow:0 1px 4px rgba(0,0,0,.12); border-radius:10px; overflow:hidden; }
+ table.result th, table.result td { padding:10px 12px; text-align:left;
+        border-bottom:1px solid #eceff1; font-size:13.5px; vertical-align:top; }
+ table.result th { background:#37474f; color:#fff; font-size:12px;
+        letter-spacing:.5px; text-transform:uppercase; }
+ table.result tr:nth-child(even) td { background:#fafafa; }
+ table.result tr:hover td { background:#e3f2fd; }
+ td.tc { font-family:Consolas,monospace; font-weight:bold; color:#1565c0; white-space:nowrap; }
+ td.num { text-align:right; font-family:Consolas,monospace; white-space:nowrap; }
+ td.detail { color:#455a64; }
+ td.shots { text-align:center; }
+ .shots-wrap { display:flex; flex-wrap:wrap; gap:4px; justify-content:center; }
+ .thumb { width:56px; border-radius:5px; border:1px solid #cfd8dc;
+          cursor:zoom-in; display:block; transition:transform .15s; }
+ .thumb:hover { transform:scale(1.1); border-color:#1565c0; }
+ .more { font-size:11px; color:#78909c; margin-top:3px; }
+ .badge { padding:4px 10px; border-radius:14px; font-size:12px;
+          font-weight:bold; white-space:nowrap; }
+ .footer { text-align:center; color:#90a4ae; font-size:12px; margin-top:28px; }
+</style></head><body>
+<div class="container">
+  <h1>📱 RCTI+ Functional Testing - Short+</h1>
+  <div class="subtitle">Laporan hasil functional testing otomatis aplikasi RCTI+
+    (Appium + UiAutomator2)</div>
+
+  <div class="banner">1 TEST FAILED &nbsp;—&nbsp; 7 dari 8 test case dieksekusi PASSED (88%)</div>
+
+  <div class="cards"><div class='card'><div class='card-value' style='color:# 474f'>8</div><div class='card-label'>TOTAL TEST CASE</div></div><div class='card'><div class='card-value' style='color:#2e7d32'>7</div><div class='card-label'>PASSED</div></div><div class='card'><div class='card-value' style='color:#c62828'>1</div><div class='card-label'>FAILED</div></div><div class='card'><div class='card-value' style='color:#546e7a'>0</div><div class='card-label'>SKIPPED</div></div><div class='card'><div class='card-value' style='color:#1565c0'>88%</div><div class='card-label'>PASS RATE</div></div><div class='card'><div class='card-value' style='color:#ef6c00'>12%</div><div class='card-label'>FAIL RATE</div></div><div class='card'><div class='card-value' style='color:# 474f'>57.9s</div><div class='card-label'>DURASI</div></div></div>
+
+  <div class="panel" style="background:#fff8e1;border-left:4px solid #f9a825">
+    <b>ℹ️ Cara membaca laporan ini</b>
+    <ul style="margin:8px 0 0 18px;padding:0;font-size:13.5px;color:#455a64;line-height:1.7">
+      <li><b>Test Case Positif</b> = memastikan fitur normal BERFUNGSI (contoh: buka halaman, konten tampil).</li>
+      <li><b>Test Case Negatif</b> = memastikan aplikasi TIDAK RUSAK saat dipakai tidak wajar
+          (contoh: <i>ketuk cepat berkali-kali</i>, <i>tekan tombol kembali berturut-turut</i>,
+          <i>ketuk area yang bukan tombol</i>). Test ini PASSED bila aplikasi tetap normal.</li>
+      <li><b>Tangkapan Layar</b> = foto layar HP saat test berjalan; klik gambar untuk memperbesar.
+          Nama file diawali kode test (mis. <code>TC-N13_...</code>) agar cocok dengan baris tabel.</li>
+      <li><b>Keterangan</b> = hasil tiap langkah dalam bahasa sederhana;
+          arahkan mouse ke teks untuk melihat detail teknis aslinya.</li>
+    </ul>
+  </div>
+
+  <h2>📋 Informasi Perangkat &amp; Aplikasi</h2>
+  <div class="panel">
+    <table class="info">
+      <tr><td>Platform</td><td><b>Android 13</b></td></tr>
+      <tr><td>Nama Perangkat (UDID)</td><td>UWVWBIKNL7ZXZPNJ</td></tr>
+      <tr><td>Model Perangkat</td><td>2201117PG</td></tr>
+      <tr><td>Produsen</td><td>Xiaomi</td></tr>
+      <tr><td>Dijalankan Oleh</td><td><b>zul.fadli</b></td></tr>
+      <tr><td>Kategori Pengujian</td><td><b>Positif &amp; Negatif (Semua Kategori)</b></td></tr>
+      <tr><td>Framework</td><td>Appium 2 + UiAutomator2 (Python Client) + Selenium WebDriver</td></tr>
+      <tr><td>Versi Android</td><td><b>Android 13</b></td></tr>
+      <tr><td>Paket Aplikasi</td><td>com.fta.rctitv</td></tr>
+      <tr><td>App Activity</td><td>com.fta.rctitv.ui.splashscreen.SplashScreenActivity</td></tr>
+      <tr><td>Tanggal Pengujian</td><td>2026-10-15 10:34:40</td></tr>
+      <tr><td>Total Durasi</td><td>57.9 detik</td></tr>
+      <tr><td>Akun Pengujian</td><td>automation.rcti1792035222.24404@gmail.com</td></tr>
+    </table>
+  </div>
+
+<h2>🔍 Analisa Test Case FAILED (1 dari 8)</h2>
+<table class="result">
+<tr><th style='width:80px'>Kode Test</th><th>Skenario</th><th style='width:100px'>Kategori</th>
+<th style='width:70px'>Durasi</th><th>Kenapa Gagal? (bahasa sederhana)</th></tr>
+<tr><td class='tc'>TC-S08</td><td>Tombol kembali berulang tanpa force close</td><td>NEGATIF</td><td class='num'>2.0s</td><td class='detail'>Kegagalan terdeteksi pada langkah test; lihat detail teknis dan screenshot untuk memastikan.<div style='margin-top:4px;color:#78909c;font-size:12px'>Detail langkah: Tombol Comment tidak tersedia untuk menyiapkan overlay Tombol kembali.</div></td></tr>
+</table>
+<div class="panel" style="margin-top:10px;font-size:13px;color:#455a64">
+  💡 <b>Tips:</b> Lihat kolom 📸 Tangkapan Layar di tabel hasil bawah untuk melihat kondisi layar
+  pas kegagalan terjadi. Biasanya penyebabnya: tampilan aplikasi berubah/loading belum selesai,
+  ada popup atau iklan yang belum tertutup, atau koneksi ke HP sempat terputus.
+</div>
+
+  <h2>📑 Daftar Test Case</h2>
+  <h2>✅ Test Case Positif (6/6 PASSED)</h2>
+  <table class="result"><tr><th style='width:80px'>Kode Test</th><th>Skenario Pengujian</th><th style='width:120px'>Status</th><th style='width:70px'>Durasi</th><th>Keterangan</th><th style='width:260px'>📸 Tangkapan Layar</th></tr>
+  <tr><td class='tc'>TC-S01</td><td>Buka tab Short+ dan validasi judul bagian</td><td><span class='badge' style='background:#e8f5e9;color:#2e7d32'>✅ PASSED</span></td><td class='num'>0.9s</td><td class='detail' title='Tab Short+ terbuka dan header feed terdeteksi.'>Tab Short+ terbuka dan judul bagian feed terdeteksi.</td><td class='shots'><span style='color:#b0bec5'>-</span></td></tr><tr><td class='tc'>TC-S02</td><td>Geser feed For You</td><td><span class='badge' style='background:#e8f5e9;color:#2e7d32'>✅ PASSED</span></td><td class='num'>5.7s</td><td class='detail' title='Feed For You menerima 3 swipe dan aplikasi tetap aktif.'>Feed For You menerima 3 geser dan aplikasi tetap aktif.</td><td class='shots'><span style='color:#b0bec5'>-</span></td></tr><tr><td class='tc'>TC-S03</td><td>Interaksi Like, Comment, dan Share</td><td><span class='badge' style='background:#e8f5e9;color:#2e7d32'>✅ PASSED</span></td><td class='num'>8.5s</td><td class='detail'>Like dapat diklik; overlay Comment dan share sheet terbukti terbuka.</td><td class='shots'><span style='color:#b0bec5'>-</span></td></tr><tr><td class='tc'>TC-S04</td><td>Navigasi dan gulir Explore</td><td><span class='badge' style='background:#e8f5e9;color:#2e7d32'>✅ PASSED</span></td><td class='num'>5.0s</td><td class='detail' title='Explore tampil dan menerima scroll naik/turun.'>Explore tampil dan menerima gulir naik/turun.</td><td class='shots'><span style='color:#b0bec5'>-</span></td></tr><tr><td class='tc'>TC-S05</td><td>Buka konten dari Explore</td><td><span class='badge' style='background:#e8f5e9;color:#2e7d32'>✅ PASSED</span></td><td class='num'>6.4s</td><td class='detail' title='Kartu Explore membuka layar dengan indikator konten/player.'>Kartu Explore membuka layar dengan indikator konten/pemutar video.</td><td class='shots'><span style='color:#b0bec5'>-</span></td></tr><tr><td class='tc'>TC-S06</td><td>Validasi GraphQL baris konten Short+</td><td><span class='badge' style='background:#e8f5e9;color:#2e7d32'>✅ PASSED</span></td><td class='num'>0.2s</td><td class='detail' title='GraphQL OK: 10 lineup bertipe short diterima.'>GraphQL OK: 10 baris konten bertipe short diterima.</td><td class='shots'><span style='color:#b0bec5'>-</span></td></tr>
+  </table>
+
+  <h2>⛔ Test Case Negatif (1/2 PASSED)</h2>
+  <table class="result"><tr><th style='width:80px'>Kode Test</th><th>Skenario Pengujian</th><th style='width:120px'>Status</th><th style='width:70px'>Durasi</th><th>Keterangan</th><th style='width:260px'>📸 Tangkapan Layar</th></tr>
+  <tr><td class='tc'>TC-S07</td><td>Rapid geser tanpa keluar sendiri</td><td><span class='badge' style='background:#e8f5e9;color:#2e7d32'>✅ PASSED</span></td><td class='num'>5.8s</td><td class='detail' title='Aplikasi tetap aktif setelah 5 rapid swipe.'>Aplikasi tetap aktif setelah 5 rapid geser.</td><td class='shots'><span style='color:#b0bec5'>-</span></td></tr><tr><td class='tc'>TC-S08</td><td>Tombol kembali berulang tanpa force close</td><td><span class='badge' style='background:#ffebee;color:#c62828'>❌ FAILED</span></td><td class='num'>2.0s</td><td class='detail' title='Tombol Comment tidak tersedia untuk menyiapkan overlay Back.'>Tombol Comment tidak tersedia untuk menyiapkan overlay Tombol kembali.</td><td class='shots'><span style='color:#b0bec5'>-</span></td></tr>
+  </table>
+
+
+  <div class="footer">
+    📸 Tangkapan layar ter-embed di tabel, hanya untuk baris FAILED/SKIPPED
+    (kebijakan retensi: test PASSED tidak menyimpan bukti visual; file asli:
+    <code>screenshots/</code>) &nbsp;|&nbsp;
+    📄 Data laporan (JSON): <code>report_shortplus_20261015_103440.json</code> &nbsp;|&nbsp;
+    Generated by Appium Automation Framework
+  </div>
+</div>
+</body></html>
